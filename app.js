@@ -1,11 +1,9 @@
 const express = require('express');
-const CONFIG = require('./config');
 const app = express();
+const CONFIG = require('./config');
 
-// app.use(express.json());
-// app.route('/',require('./route'));
-// app.route('/api/shorten',require('./route/url'));
-// app.get('/',(req,res)=>{
-//     res.send('lala');
-// });
-app.listen(CONFIG.PORT,`Server running on ${CONFIG.PORT}`)
+app.use(express.json());
+app.use('/',require('./route'));
+app.use('/api/shorten',require('./route/url'));
+
+app.listen(CONFIG.PORT,console.log(`Server running at: http://localhost:${CONFIG.PORT}/`));

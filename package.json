@@ -18,6 +18,7 @@
   "homepage": "https://github.com/kk-007/url-shortner#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "getid": "^0.1.0"
+    "getid": "^0.1.0",
+    "valid-url": "^1.0.9"
   }
 }
