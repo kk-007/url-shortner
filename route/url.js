@@ -13,7 +13,7 @@ router.post('/',(req,res)=>{
             let id=getID();
             let chunk={
                 fullURL,
-                url:'http://localhost:5000/'+id,
+                url:`http://localhost:${CONFIG.PORT}/${id}`,
                 id
             }
             CONFIG.DATA.push(chunk);
