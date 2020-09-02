@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.post('/',(req,res)=>{
     let { fullURL } = req.body;
+    console.log(req.body);
 
     if(validURL.isUri(fullURL)){
         let obj = CONFIG.DATA.find(e=>e.fullURL===fullURL);
